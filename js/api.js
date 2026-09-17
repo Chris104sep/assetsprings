@@ -11,6 +11,7 @@ const API = {
     // Replace with your actual Web App URL:
     // Example: 'https://script.google.com/macros/s/AKfyc.../exec'
     BASE_URL: 'https://script.google.com/macros/s/AKfycbxQAFcWYkJIAPA4oQEnc-idU8G75x3VG1nIBKeWaNtFeNv_nWv3KrFBxjBBYrxRiZ5cZA/exec',
+',
 
     // Request timeout (milliseconds)
     TIMEOUT: 30000,
@@ -89,7 +90,7 @@ const API = {
             clearTimeout(timeoutId);
 
             // ----------------------------------------------------
-            // 5. Read raw response text (for debugging)
+            // 5. Readc raw response text (for debugging)
             // ----------------------------------------------------
             const rawText = await response.text();
 
@@ -113,7 +114,7 @@ const API = {
 
             if (trimmed.startsWith('<')) {
                 // The backend returned HTML — usually a Google sign-in
-                // page or deployment error page.
+                // pagec or deployment error page.
                 console.error(
                     '[API] Received HTML instead of JSON.\n' +
                     'This usually means:\n' +
