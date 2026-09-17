@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetSpring — Save with a plan, not a guess</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/welcome.css">
+</head>
+<body>
+    <!-- ============================================================
+    APP CONTAINER
+    ============================================================ -->
+    <div id="app">
+        <!-- Welcome Page (Public) -->
+        <div id="page-welcome" class="page active welcome-v2">
+
+            <a href="#welcome-main" class="ws-skip-link">Skip to content</a>
+
+            <header class="ws-nav">
+                <a href="#" class="ws-nav-logo" onclick="showPage('welcome'); return false;"><svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>AssetSpring</a>
+                <ul class="ws-nav-links">
+                    <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                    <li><a href="#" onclick="showPage('testimonials'); return false;">Testimonials</a></li>
+                    <li><a href="#" onclick="showPage('terms'); return false;">Terms</a></li>
+                    <li><a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure</a></li>
+                </ul>
+                <div class="ws-nav-actions">
+                    <a href="#" class="ws-nav-login" onclick="showPage('signin'); return false;">Log in</a>
+                    <a href="#" class="ws-btn ws-btn-primary" style="min-height:42px; padding:0 18px; font-size:14px;" onclick="showPage('signup'); return false;">Open an account</a>
+                </div>
+            </header>
+
+            <main id="welcome-main">
+                <section class="ws-hero" aria-labelledby="welcome-hero-heading">
+                    <div class="ws-hero-container">
+
+                        <div class="ws-hero-content">
+
+                            <div class="ws-badge">
+                                <span class="ws-badge-dot"></span>
+                                Now open to new members
+                            </div>
+
+                            <h1 id="welcome-hero-heading">Save with a plan,<br>not a guess.</h1>
+
+                            <p class="ws-hero-description">
+                                AssetSpring turns your goals into a weekly plan: automatic transfers, clear progress, and a rate that actually keeps up with inflation. No spreadsheets required.
+                            </p>
+
+                            <div class="ws-hero-actions">
+                                <a href="#" class="ws-btn ws-btn-primary" onclick="showPage('signup'); return false;">Open an account</a>
+                                <a href="#" class="ws-btn ws-btn-secondary" onclick="showPage('about'); return false;">See how it works</a>
+                            </div>
+
+                            <div class="ws-trust-row">
+                                <div class="ws-trust-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
+                                    Your data is encrypted in transit and at rest
+                                </div>
+                                <div class="ws-trust-divider"></div>
+                                <div class="ws-trust-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16.5 4.2a3.5 3.5 0 0 1 0 6.9"/><path d="M18.5 14.3c2.4.6 4 2.6 4 5.7"/></svg>
+                                    Built for people who'd rather not manage a spreadsheet
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="ws-hero-visual">
+
+                            <div class="ws-ledger-card">
+
+                                <div class="ws-ledger-header">
+                                    <div class="ws-ledger-title">Your goals</div>
+                                    <div class="ws-ledger-updated">Example account</div>
+                                </div>
+
+                                <div class="ws-goal-row">
+                                    <div class="ws-goal-top">
+                                        <span class="ws-goal-name">Emergency fund</span>
+                                        <span class="ws-goal-amount">$8,240 of $10,000</span>
+                                    </div>
+                                    <div class="ws-goal-track"><div class="ws-goal-fill" style="width:82%"></div></div>
+                                </div>
+
+                                <div class="ws-goal-row">
+                                    <div class="ws-goal-top">
+                                        <span class="ws-goal-name">Home down payment</span>
+                                        <span class="ws-goal-amount">$24,650 of $60,000</span>
+                                    </div>
+                                    <div class="ws-goal-track"><div class="ws-goal-fill" style="width:41%"></div></div>
+                                </div>
+
+                                <div class="ws-goal-row">
+                                    <div class="ws-goal-top">
+                                        <span class="ws-goal-name">Trip to Lisbon</span>
+                                        <span class="ws-goal-amount">$2,100 of $3,500</span>
+                                    </div>
+                                    <div class="ws-goal-track"><div class="ws-goal-fill" style="width:60%"></div></div>
+                                </div>
+
+                                <div class="ws-ledger-footer">
+                                    <div>
+                                        <div class="ws-rate-label">Example savings rate</div>
+                                        <div class="ws-rate-value">+6.2% this year</div>
+                                    </div>
+                                    <svg class="ws-sparkline" width="84" height="30" viewBox="0 0 84 30" fill="none">
+                                        <polyline points="0,26 12,22 24,23 36,15 48,17 60,8 72,10 84,3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                            </div>
+
+                            <div class="ws-stat-callout">
+                                <div class="ws-stat-callout-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                </div>
+                                <div>
+                                    <small>Example</small>
+                                    <strong>+$1,240 saved</strong>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="ws-testimonials" aria-labelledby="welcome-testimonials-heading">
+                    <div class="ws-testimonials-head">
+                        <div class="ws-testimonials-eyebrow">Member stories</div>
+                        <h2 id="welcome-testimonials-heading">Real goals, real plans, all on track.</h2>
+                    </div>
+
+                    <div class="ws-marquee-viewport">
+                        <div class="ws-marquee-track" id="welcome-marquee">
+                            <div class="ws-marquee-group" role="list" id="welcome-marquee-group-1">
+                                <!-- Testimonials injected here by loadWelcomeTestimonials() -->
+                            </div>
+                            <div class="ws-marquee-group" aria-hidden="true" id="welcome-marquee-group-2">
+                                <!-- Duplicate of group 1, injected for the seamless scroll loop -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="ws-footer ws-grid-bg ws-grid-bg--flat">
+                <div class="ws-footer-inner">
+                    <div>
+                        <div class="ws-footer-brand"><svg class="ws-logo-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg> AssetSpring</div>
+                        <p class="ws-footer-tagline">Save with a plan, not a guess. Automatic transfers, clear goals, progress you can actually see.</p>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Product</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                            <li><a href="#" onclick="showPage('testimonials'); return false;">Testimonials</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Open an account</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Account</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('signin'); return false;">Log in</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Sign up</a></li>
+                            <li><a href="#" onclick="showPage('forgot-password'); return false;">Forgot password</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Legal</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('terms'); return false;">Terms of Service</a></li>
+                            <li><a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a></li>
+                            <li><a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure</a></li>
+                            <li><a href="#" onclick="showPage('aml-kyc'); return false;">AML / KYC Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Policies</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('cookie-policy'); return false;">Cookie Policy</a></li>
+                            <li><a href="#" onclick="showPage('deposit-withdrawal-policy'); return false;">Deposit &amp; Withdrawal</a></li>
+                            <li><a href="#" onclick="showPage('referral-terms'); return false;">Referral Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ws-footer-bottom">
+                    <span>&copy; <span class="ws-footer-year"></span> AssetSpring. All rights reserved.</span>
+                    <span>Not a bank &mdash; see our Risk Disclosure and Terms of Service for how savings and investment features actually work.</span>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Sign In Page -->
+        <div id="page-signin" class="page welcome-v2">
+            <div class="auth-container ws-grid-bg ws-grid-bg--flat">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <div class="logo" onclick="showPage('welcome')">
+                            <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                            <span>AssetSpring</span>
+                        </div>
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to your account</p>
+                    </div>
+                    <form id="signin-form" onsubmit="handleSignIn(event)">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Username or Email</label>
+                            <input type="text" id="signin-username" placeholder="Enter your username or email" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Password</label>
+                            <div class="password-input">
+                                <input type="password" id="signin-password" placeholder="Enter your password" required>
+                                <button type="button" class="toggle-password" onclick="togglePasswordVisibility('signin-password')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="remember-me">
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" onclick="showPage('forgot-password')" class="forgot-link">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="signin-btn">
+                            <i class="fas fa-sign-in-alt"></i> Sign In
+                        </button>
+                    </form>
+                    <div class="auth-footer">
+                        <p>Don't have an account? <a href="#" onclick="showPage('signup')">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Page -->
+        <div id="page-signup" class="page welcome-v2">
+            <div class="auth-container ws-grid-bg ws-grid-bg--flat">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <div class="logo" onclick="showPage('welcome')">
+                            <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                            <span>AssetSpring</span>
+                        </div>
+                        <h2>Create Account</h2>
+                        <p>Start your savings and investment journey</p>
+                    </div>
+                    <form id="signup-form" onsubmit="handleSignUp(event)">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Full Name</label>
+                            <input type="text" id="signup-fullname" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-user-tag"></i> Username</label>
+                            <input type="text" id="signup-username" placeholder="Choose a username" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="signup-email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i> Phone</label>
+                            <input type="tel" id="signup-phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Password</label>
+                            <div class="password-input">
+                                <input type="password" id="signup-password" placeholder="Create a password (min 8 chars)" required>
+                                <button type="button" class="toggle-password" onclick="togglePasswordVisibility('signup-password')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-gift"></i> Referral Code (Optional)</label>
+                            <input type="text" id="signup-referral" placeholder="Enter referral code if you have one">
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="signup-consent-accuracy" required>
+                                <span>I confirm that the information I have provided is accurate and complete, and I agree to comply with AssetSpring's policies and applicable law.</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="signup-consent-legal" required>
+                                <span>I have read and agree to the <a href="#" onclick="showPage('terms'); return false;">Terms of Service</a> and <a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a>.</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="signup-consent-risk" required>
+                                <span>I acknowledge the applicable financial, investment, and cryptocurrency risks described in the <a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure Statement</a>.</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="signup-btn">
+                            <i class="fas fa-user-plus"></i> Create Account
+                        </button>
+                    </form>
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="#" onclick="showPage('signin')">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forgot Password Page -->
+        <div id="page-forgot-password" class="page welcome-v2">
+            <div class="auth-container ws-grid-bg ws-grid-bg--flat">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <div class="logo" onclick="showPage('welcome')">
+                            <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                            <span>AssetSpring</span>
+                        </div>
+                        <h2>Reset Password</h2>
+                        <p>Enter your email to receive reset instructions</p>
+                    </div>
+                    <form id="forgot-password-form" onsubmit="handleForgotPassword(event)">
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="forgot-email" placeholder="Enter your email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="forgot-btn">
+                            <i class="fas fa-paper-plane"></i> Send Reset Instructions
+                        </button>
+                    </form>
+                    <div class="auth-footer">
+                        <p><a href="#" onclick="showPage('signin')"><i class="fas fa-arrow-left"></i> Back to Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reset Password Page -->
+        <div id="page-reset-password" class="page welcome-v2">
+            <div class="auth-container ws-grid-bg ws-grid-bg--flat">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <div class="logo" onclick="showPage('welcome')">
+                            <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                            <span>AssetSpring</span>
+                        </div>
+                        <h2>Create New Password</h2>
+                        <p>Enter your new password below</p>
+                    </div>
+                    <form id="reset-password-form" onsubmit="handleResetPassword(event)">
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> New Password</label>
+                            <div class="password-input">
+                                <input type="password" id="reset-new-password" placeholder="Enter new password (min 8 chars)" required>
+                                <button type="button" class="toggle-password" onclick="togglePasswordVisibility('reset-new-password')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Confirm New Password</label>
+                            <input type="password" id="reset-confirm-password" placeholder="Confirm new password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="reset-btn">
+                            <i class="fas fa-key"></i> Reset Password
+                        </button>
+                    </form>
+                    <div class="auth-footer">
+                        <p><a href="#" onclick="showPage('signin')"><i class="fas fa-arrow-left"></i> Back to Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="page-about" class="page welcome-v2">
+            <div class="page-container ws-grid-bg ws-grid-bg--flat">
+                <nav class="page-nav">
+                    <div class="logo" onclick="showPage('welcome')">
+                        <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                        <span>AssetSpring</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="showPage('welcome')"><i class="fas fa-arrow-left"></i> Back</button>
+                </nav>
+                <div class="page-content">
+                    <h1>About AssetSpring</h1>
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <i class="fas fa-piggy-bank"></i>
+                            <h3>Smart Savings</h3>
+                            <p>Set and track savings goals with ease. Our platform helps you stay on track with visual progress indicators and timely notifications.</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-chart-pie"></i>
+                            <h3>Investment Tracking</h3>
+                            <p>Choose from multiple investment plans and track your portfolio performance in real-time with comprehensive analytics.</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Transparency</h3>
+                            <p>We believe in complete transparency. All returns are clearly identified as projected, and every transaction is logged and auditable.</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <h3>Financial Growth</h3>
+                            <p>Whether you're a beginner or experienced investor, AssetSpring provides the tools and insights you need to grow your wealth.</p>
+                        </div>
+                    </div>
+                </div>
+            <footer class="ws-footer ws-grid-bg ws-grid-bg--flat">
+                <div class="ws-footer-inner">
+                    <div>
+                        <div class="ws-footer-brand"><svg class="ws-logo-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg> AssetSpring</div>
+                        <p class="ws-footer-tagline">Save with a plan, not a guess. Automatic transfers, clear goals, progress you can actually see.</p>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Product</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                            <li><a href="#" onclick="showPage('testimonials'); return false;">Testimonials</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Open an account</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Account</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('signin'); return false;">Log in</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Sign up</a></li>
+                            <li><a href="#" onclick="showPage('forgot-password'); return false;">Forgot password</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Legal</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('terms'); return false;">Terms of Service</a></li>
+                            <li><a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a></li>
+                            <li><a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure</a></li>
+                            <li><a href="#" onclick="showPage('aml-kyc'); return false;">AML / KYC Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Policies</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('cookie-policy'); return false;">Cookie Policy</a></li>
+                            <li><a href="#" onclick="showPage('deposit-withdrawal-policy'); return false;">Deposit &amp; Withdrawal</a></li>
+                            <li><a href="#" onclick="showPage('referral-terms'); return false;">Referral Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ws-footer-bottom">
+                    <span>&copy; <span class="ws-footer-year"></span> AssetSpring. All rights reserved.</span>
+                    <span>Not a bank &mdash; see our Risk Disclosure and Terms of Service for how savings and investment features actually work.</span>
+                </div>
+            </footer>
+            </div>
+        </div>
+
+        <!-- Terms of Service, Privacy Policy, Risk Disclosure, AML/KYC,
+             Cookie Policy, Deposit & Withdrawal Policy, Referral Terms -->
+        <div id="page-terms" class="page welcome-v2">
+            <div class="page-container ws-grid-bg ws-grid-bg--flat">
+                <nav class="page-nav">
+                    <div class="logo" onclick="showPage('welcome')">
+                        <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                        <span>AssetSpring</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="showPage('welcome')"><i class="fas fa-arrow-left"></i> Back</button>
+                </nav>
+                <div class="page-content legal-content">
+                    <h1>Terms of Service</h1>
+                    <p class="legal-meta">Effective Date: [Insert Date] &middot; Last Updated: [Insert Date]</p>
+<div class="legal-section">
+<h3>About AssetSpring</h3>
+<p>AssetSpring is a digital savings and investment management platform designed to provide users with tools for managing their savings, deposits, account information, transactions, and related financial activities.</p>
+<p>AssetSpring may provide administrative and informational features through which users can submit transaction requests and supporting documentation.</p>
+<p>Unless expressly stated otherwise in a separate agreement, AssetSpring does not guarantee any particular financial return, profit, interest rate, appreciation, or investment outcome.</p>
+</div>
+<div class="legal-section">
+<h3>Eligibility</h3>
+<p>To use AssetSpring, you must:</p>
+<ul><li>Provide accurate and complete registration information.</li><li>Be legally capable of entering into an agreement.</li><li>Comply with all applicable laws and regulations.</li><li>Maintain the confidentiality of your account credentials.</li><li>Use the Platform only for lawful purposes.</li></ul>
+<p>AssetSpring may restrict or terminate accounts where information provided is false, misleading, fraudulent, incomplete, or otherwise inconsistent with applicable requirements.</p>
+</div>
+<div class="legal-section">
+<h3>Account Registration</h3>
+<p>Certain features require you to create an account.</p>
+<p>You agree to:</p>
+<ul><li>Provide accurate registration information.</li><li>Keep your password confidential.</li><li>Immediately notify AssetSpring of unauthorized access.</li><li>Maintain accurate account information.</li><li>Not impersonate another person.</li><li>Not create accounts for fraudulent or unlawful purposes.</li></ul>
+<p>You are responsible for activity conducted through your account unless the activity resulted from unauthorized access that you promptly reported to AssetSpring.</p>
+</div>
+<div class="legal-section">
+<h3>User Roles And Administration</h3>
+<p>AssetSpring may assign different account roles according to its administrative structure.</p>
+<p>These may include:</p>
+<ul><li>Super Administrator: The initial authorized administrator with</li></ul>
+<p>the highest administrative privileges.</p>
+<ul><li>Administrator: Authorized personnel responsible for designated</li></ul>
+<p>administrative functions.</p>
+<ul><li>Regular User: A registered user with access to standard</li></ul>
+<p>Platform functions.</p>
+<p>AssetSpring reserves the right to modify permissions, roles, access levels, or administrative structures where reasonably necessary for security, maintenance, compliance, or operational purposes.</p>
+</div>
+<div class="legal-section">
+<h3>Deposits And Transaction Verification</h3>
+<p>Where supported by the Platform, users may be instructed to send funds to designated cryptocurrency wallet addresses or other payment channels specified by AssetSpring.</p>
+<p>Users are responsible for:</p>
+<ul><li>Sending funds to the correct wallet address.</li><li>Selecting the correct blockchain/network where applicable.</li><li>Entering accurate transaction information.</li><li>Retaining transaction records.</li><li>Submitting valid proof of payment when requested.</li></ul>
+<p>A transaction submission or proof-of-payment upload does not automatically constitute confirmation of funds received.</p>
+<p>Transactions may remain pending until AssetSpring or an authorized administrator verifies the relevant transaction.</p>
+<p>AssetSpring is not responsible for losses caused by:</p>
+<ul><li>Sending funds to an incorrect wallet address.</li><li>Using an unsupported blockchain network.</li><li>Providing incorrect transaction information.</li><li>Unauthorized transactions initiated by the user.</li><li>Blockchain congestion or network failures.</li><li>Blockchain transaction reversals, delays, or irreversible</li></ul>
+<p>transfers.</p>
+</div>
+<div class="legal-section">
+<h3>Investment And Financial Risk</h3>
+<p>Financial and cryptocurrency-related activities involve risk.</p>
+<p>You acknowledge that:</p>
+<ul><li>Cryptocurrency values may fluctuate substantially.</li><li>Digital-asset transactions may be irreversible.</li><li>Investment outcomes are not guaranteed.</li><li>Past performance does not guarantee future results.</li><li>You may lose some or all of funds involved in a financial</li></ul>
+<p>activity.</p>
+<ul><li>You are responsible for independently assessing the risks</li></ul>
+<p>associated with any transaction.</p>
+<p>Nothing on AssetSpring should be interpreted as a guarantee of profit or as individualized financial, legal, tax, or investment advice unless expressly provided under a separate arrangement by a properly authorized professional.</p>
+</div>
+<div class="legal-section">
+<h3>Fees</h3>
+<p>AssetSpring may charge transaction, administrative, withdrawal, service, network, or other applicable fees.</p>
+<p>Where reasonably practicable, applicable fees will be communicated before the relevant transaction is completed.</p>
+<p>Third-party blockchain network fees may be outside AssetSpring&#x27;s control.</p>
+</div>
+<div class="legal-section">
+<h3>Referral Programs</h3>
+<p>Where AssetSpring provides referral functionality, users may receive referral benefits according to the applicable referral terms.</p>
+<p>Users must not:</p>
+<ul><li>Create fraudulent referral accounts.</li><li>Use automated systems to manipulate referrals.</li><li>Misrepresent AssetSpring.</li><li>Engage in spam or deceptive marketing.</li><li>Attempt to manipulate referral rewards.</li></ul>
+<p>AssetSpring may cancel referral benefits associated with suspected abuse or fraudulent activity.</p>
+</div>
+<div class="legal-section">
+<h3>Prohibited Activities</h3>
+<p>You must not use AssetSpring to:</p>
+<ul><li>Commit fraud.</li><li>Launder money.</li><li>Finance illegal activities.</li><li>Circumvent applicable sanctions or legal restrictions.</li><li>Access another user&#x27;s account without authorization.</li><li>Upload malicious software.</li><li>Attempt to compromise Platform security.</li><li>Manipulate transactions or account records.</li><li>Submit forged or fraudulent documents.</li><li>Interfere with Platform operation.</li><li>Reverse-engineer protected Platform components except where</li></ul>
+<p>legally permitted.</p>
+<ul><li>Use the Platform for any unlawful purpose.</li></ul>
+</div>
+<div class="legal-section">
+<h3>Transaction Records And Administrative Updates</h3>
+<p>AssetSpring may maintain transaction records and administrative records for operational, security, accounting, verification, auditing, and compliance purposes.</p>
+<p>Where transactions require manual verification, AssetSpring may update transaction status after reviewing available evidence.</p>
+<p>A transaction may be marked pending, approved, rejected, cancelled, reversed, or assigned another status according to Platform procedures.</p>
+</div>
+<div class="legal-section">
+<h3>Platform Availability</h3>
+<p>AssetSpring aims to maintain reliable Platform availability but does not guarantee uninterrupted or error-free operation.</p>
+<p>The Platform may become temporarily unavailable because of:</p>
+<ul><li>Maintenance.</li><li>Security measures.</li><li>Software updates.</li><li>Internet failures.</li><li>Hosting failures.</li><li>Blockchain/network interruptions.</li><li>Third-party service interruptions.</li><li>Force majeure events.</li></ul>
+</div>
+<div class="legal-section">
+<h3>Intellectual Property</h3>
+<p>Unless otherwise stated, AssetSpring&#x27;s software, branding, logos, interface designs, text, graphics, documentation, and other Platform content are owned by or licensed to AssetSpring.</p>
+<p>You may not reproduce, distribute, modify, sell, or commercially exploit protected AssetSpring content without authorization.</p>
+</div>
+<div class="legal-section">
+<h3>Third-Party Services</h3>
+<p>AssetSpring may interact with third-party services, including hosting providers, payment or blockchain networks, authentication services, analytics services, and infrastructure providers.</p>
+<p>AssetSpring is not responsible for the independent policies, availability, or actions of third-party services.</p>
+</div>
+<div class="legal-section">
+<h3>Privacy</h3>
+<p>Your use of AssetSpring is also governed by the AssetSpring Privacy Policy, which explains how personal information may be collected, used, stored, disclosed, and protected.</p>
+</div>
+<div class="legal-section">
+<h3>Account Suspension And Termination</h3>
+<p>AssetSpring may suspend, restrict, or terminate an account where reasonably necessary because of:</p>
+<ul><li>Violation of these Terms.</li><li>Fraud or suspected fraud.</li><li>Security concerns.</li><li>Illegal activity.</li><li>Misuse of the Platform.</li><li>False or misleading information.</li><li>Compliance requirements.</li><li>Abuse of Platform functionality.</li></ul>
+</div>
+<div class="legal-section">
+<h3>User Responsibility</h3>
+<p>You are responsible for reviewing your account information, transaction history, and submitted information.</p>
+<p>You should promptly report suspected errors, unauthorized transactions, security incidents, or suspicious account activity.</p>
+</div>
+<div class="legal-section">
+<h3>Disclaimers</h3>
+<p>To the maximum extent permitted by applicable law, AssetSpring provides the Platform on an &quot;as available&quot; basis.</p>
+<p>AssetSpring does not guarantee that:</p>
+<ul><li>The Platform will always be available.</li><li>Every transaction will be processed without delay.</li><li>Information will always be error-free.</li><li>A particular investment outcome will occur.</li><li>Cryptocurrency transactions will be reversible.</li><li>The Platform will be free from all security vulnerabilities.</li></ul>
+<p>Nothing in these Terms excludes rights or protections that cannot legally be excluded.</p>
+</div>
+<div class="legal-section">
+<h3>Limitation Of Liability</h3>
+<p>To the maximum extent permitted by applicable law, AssetSpring and its authorized personnel will not be liable for indirect, incidental, consequential, special, or punitive losses arising from use of the Platform.</p>
+<p>This may include losses associated with market movements, blockchain failures, network delays, incorrect wallet addresses supplied by users, unauthorized access resulting from compromised user credentials, or third-party service failures.</p>
+<p>Nothing in these Terms limits liability where such limitation is prohibited by applicable law.</p>
+</div>
+<div class="legal-section">
+<h3>Indemnification</h3>
+<p>To the extent permitted by law, you agree to indemnify and hold AssetSpring harmless from claims, losses, liabilities, damages, and expenses arising from:</p>
+<ul><li>Your violation of these Terms.</li><li>Your unlawful use of the Platform.</li><li>Fraudulent activity associated with your account.</li><li>Your violation of another person&#x27;s rights.</li><li>Information or documents you knowingly submit that are false</li></ul>
+<p>or fraudulent.</p>
+</div>
+<div class="legal-section">
+<h3>Changes To These Terms</h3>
+<p>AssetSpring may update these Terms from time to time.</p>
+<p>Updated Terms may be published on the Platform with a revised &quot;Last Updated&quot; date.</p>
+<p>Continued use of AssetSpring after an update constitutes acceptance of the revised Terms to the extent permitted by applicable law.</p>
+</div>
+<div class="legal-section">
+<h3>Governing Law</h3>
+<p>These Terms shall be governed by the applicable laws of the jurisdiction in which AssetSpring is legally established, subject to any mandatory consumer-protection or regulatory requirements that apply to the user.</p>
+<p>Jurisdiction: [Insert applicable jurisdiction]</p>
+</div>
+<div class="legal-section">
+<h3>Contact</h3>
+<p>AssetSpring Email: [Insert Official Email] Website: [Insert Website] Address: [Insert Business Address]</p>
+</div>
+<div class="legal-section">
+<h3>Acceptance</h3>
+<p>By selecting &quot;I Agree,&quot; creating an account, or using AssetSpring, you acknowledge that you have read and agree to these Terms of Service.</p>
+</div>
+                    <div class="legal-review-notice"><strong>Legal review notice:</strong> This document is a general legal and product-policy template and is not a substitute for advice from a qualified lawyer or compliance professional. Because AssetSpring involves savings, investment-related functionality, cryptocurrency transactions, and personal data, these documents should be reviewed by appropriately qualified legal and compliance professionals in the relevant jurisdiction before the platform accepts real customer funds or is publicly launched, and adapted to AssetSpring’s actual business structure, licensing status, services, jurisdictions, custody arrangements, payment mechanisms, and regulatory obligations.</div>
+                </div>
+            </div>
+            <footer class="ws-footer ws-grid-bg ws-grid-bg--flat">
+                <div class="ws-footer-inner">
+                    <div>
+                        <div class="ws-footer-brand"><svg class="ws-logo-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg> AssetSpring</div>
+                        <p class="ws-footer-tagline">Save with a plan, not a guess. Automatic transfers, clear goals, progress you can actually see.</p>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Product</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                            <li><a href="#" onclick="showPage('testimonials'); return false;">Testimonials</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Open an account</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Account</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('signin'); return false;">Log in</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Sign up</a></li>
+                            <li><a href="#" onclick="showPage('forgot-password'); return false;">Forgot password</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Legal</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('terms'); return false;">Terms of Service</a></li>
+                            <li><a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a></li>
+                            <li><a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure</a></li>
+                            <li><a href="#" onclick="showPage('aml-kyc'); return false;">AML / KYC Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Policies</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('cookie-policy'); return false;">Cookie Policy</a></li>
+                            <li><a href="#" onclick="showPage('deposit-withdrawal-policy'); return false;">Deposit &amp; Withdrawal</a></li>
+                            <li><a href="#" onclick="showPage('referral-terms'); return false;">Referral Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ws-footer-bottom">
+                    <span>&copy; <span class="ws-footer-year"></span> AssetSpring. All rights reserved.</span>
+                    <span>Not a bank &mdash; see our Risk Disclosure and Terms of Service for how savings and investment features actually work.</span>
+                </div>
+            </footer>
+        </div>
+
+        <div id="page-privacy" class="page welcome-v2">
+            <div class="page-container ws-grid-bg ws-grid-bg--flat">
+                <nav class="page-nav">
+                    <div class="logo" onclick="showPage('welcome')">
+                        <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                        <span>AssetSpring</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="showPage('welcome')"><i class="fas fa-arrow-left"></i> Back</button>
+                </nav>
+                <div class="page-content legal-content">
+                    <h1>Privacy Policy</h1>
+                    <p class="legal-meta">Effective Date: [Insert Date] &middot; Last Updated: [Insert Date]</p>
+<div class="legal-section">
+<h3>Information We Collect</h3>
+<p>Depending on how you use AssetSpring, we may collect:</p>
+<h4>Account Information</h4>
+<ul><li>Full name.</li><li>Email address.</li><li>Telephone number.</li><li>Username.</li><li>Password or authentication information.</li><li>Referral code.</li><li>Account role.</li><li>Registration information.</li></ul>
+<h4>Transaction Information</h4>
+<ul><li>Deposit amount.</li><li>Transaction identification/hash.</li><li>Wallet address.</li><li>Blockchain/network information.</li><li>Transaction date and time.</li><li>Transaction status.</li><li>Withdrawal information.</li><li>Payment or transaction references.</li><li>Proof-of-payment documents or screenshots.</li></ul>
+<h4>Technical Information</h4>
+<ul><li>IP address.</li><li>Browser type.</li><li>Device type.</li><li>Operating system.</li><li>Application usage information.</li><li>Login timestamps.</li><li>Security logs.</li><li>Error and diagnostic information.</li></ul>
+<h4>Communications</h4>
+<p>If you contact AssetSpring, we may retain information contained in your communications, including support requests and related correspondence.</p>
+</div>
+<div class="legal-section">
+<h3>How We Use Your Information</h3>
+<p>We may use collected information to:</p>
+<ul><li>Create and manage user accounts.</li><li>Authenticate users.</li><li>Process and verify transactions.</li><li>Maintain transaction records.</li><li>Confirm submitted deposits.</li><li>Provide Platform services.</li><li>Communicate with users.</li><li>Respond to support requests.</li><li>Prevent fraud and unauthorized activity.</li><li>Maintain Platform security.</li><li>Detect suspicious transactions.</li><li>Maintain administrative records.</li><li>Improve Platform functionality.</li><li>Conduct internal analysis.</li><li>Comply with legal and regulatory obligations.</li><li>Enforce our Terms of Service.</li></ul>
+</div>
+<div class="legal-section">
+<h3>Password Security</h3>
+<p>Passwords should be stored using appropriate security controls and should not be stored as readable plain text.</p>
+<p>Users are responsible for maintaining the confidentiality of their passwords and should not share them with other people.</p>
+</div>
+<div class="legal-section">
+<h3>Transaction And Blockchain Information</h3>
+<p>Some transactions may occur through public blockchain networks.</p>
+<p>Depending on the blockchain used, transaction information such as wallet addresses, transaction hashes, timestamps, and amounts may be publicly visible on the relevant blockchain.</p>
+<p>Because public blockchain records may be permanent, AssetSpring cannot guarantee that information recorded directly on a public blockchain can later be deleted or modified.</p>
+</div>
+<div class="legal-section">
+<h3>Proof Of Payment</h3>
+<p>If you submit proof of payment, the submitted material may contain personal, financial, transactional, or technical information.</p>
+<p>Such materials may be accessed by authorized personnel for verification, fraud prevention, accounting, security, and compliance purposes.</p>
+<p>You should avoid submitting unnecessary sensitive information.</p>
+</div>
+<div class="legal-section">
+<h3>Google Sheets And Google Apps Script</h3>
+<p>AssetSpring may use Google Sheets and Google Apps Script as part of its backend infrastructure, database, administrative system, or application-processing environment.</p>
+<p>Information may therefore be processed through the relevant Google infrastructure used to operate AssetSpring.</p>
+<p>Access to backend records should be restricted to authorized personnel, and appropriate authentication and access controls should be implemented.</p>
+<p>For information concerning Google&#x27;s own processing of data, users should review Google&#x27;s applicable privacy documentation.</p>
+</div>
+<div class="legal-section">
+<h3>Cookies And Similar Technologies</h3>
+<p>AssetSpring may use cookies, local storage, session storage, or similar technologies to:</p>
+<ul><li>Maintain login sessions.</li><li>Remember user preferences.</li><li>Improve Platform functionality.</li><li>Support security.</li><li>Analyze Platform performance.</li></ul>
+<p>Users may be able to control cookies through their browser settings, although disabling certain technologies may affect Platform functionality.</p>
+</div>
+<div class="legal-section">
+<h3>Information Sharing</h3>
+<p>AssetSpring may disclose information where reasonably necessary to:</p>
+<ul><li>Authorized administrators.</li><li>Service providers.</li><li>Hosting and infrastructure providers.</li><li>Security providers.</li><li>Professional advisers.</li><li>Auditors.</li><li>Legal or regulatory authorities.</li><li>Law-enforcement authorities where legally required.</li><li>Successor entities in connection with a lawful business</li></ul>
+<p>transfer.</p>
+<p>AssetSpring does not authorize third parties to use your information for unrelated purposes merely because they provide services to AssetSpring.</p>
+</div>
+<div class="legal-section">
+<h3>Legal And Regulatory Disclosure</h3>
+<p>AssetSpring may disclose information where required or permitted by applicable law, regulation, court order, governmental request, fraud investigation, security investigation, or other lawful process.</p>
+</div>
+<div class="legal-section">
+<h3>Data Retention</h3>
+<p>We retain personal information for as long as reasonably necessary for the purposes described in this Privacy Policy, including account administration, transaction records, security, dispute resolution, accounting, legal obligations, and regulatory requirements.</p>
+<p>Retention periods may vary depending on the type of information and applicable legal requirements.</p>
+</div>
+<div class="legal-section">
+<h3>Data Security</h3>
+<p>AssetSpring will use reasonable technical and organizational measures designed to protect information against unauthorized access, alteration, disclosure, destruction, or loss.</p>
+<p>However, no internet-connected system can be guaranteed to be completely secure.</p>
+<p>Users should:</p>
+<ul><li>Use strong passwords.</li><li>Avoid sharing account credentials.</li><li>Log out from shared devices.</li><li>Protect email accounts associated with AssetSpring.</li><li>Report suspicious activity promptly.</li></ul>
+</div>
+<div class="legal-section">
+<h3>Your Privacy Rights</h3>
+<p>Depending on applicable law, you may have rights relating to your personal information, which may include:</p>
+<ul><li>Requesting access to personal information.</li><li>Requesting correction of inaccurate information.</li><li>Requesting deletion where legally available.</li><li>Requesting restriction of certain processing.</li><li>Objecting to certain processing.</li><li>Requesting information about how your data is used.</li><li>Withdrawing consent where processing is based on consent.</li></ul>
+<p>Some requests may be subject to legal, regulatory, security, accounting, or transaction-record requirements.</p>
+</div>
+<div class="legal-section">
+<h3>Children's Privacy</h3>
+<p>AssetSpring is not intended for individuals who are not legally permitted to use financial or investment-related services.</p>
+<p>We do not knowingly seek to collect personal information from children in violation of applicable law.</p>
+</div>
+<div class="legal-section">
+<h3>International Data Transfers</h3>
+<p>Depending on the infrastructure and service providers used by AssetSpring, personal information may be processed or stored in jurisdictions outside the country where you reside.</p>
+<p>Where required, AssetSpring will seek to apply appropriate safeguards to such processing.</p>
+</div>
+<div class="legal-section">
+<h3>Third-Party Websites And Services</h3>
+<p>AssetSpring may contain links to third-party websites or integrate with third-party services.</p>
+<p>This Privacy Policy does not govern third-party privacy practices.</p>
+<p>Users should review the privacy policies of third-party services before providing information to them.</p>
+</div>
+<div class="legal-section">
+<h3>Data Breaches And Security Incidents</h3>
+<p>If AssetSpring becomes aware of a personal-data security incident, we will assess the incident and take reasonable steps required by applicable law, which may include containment, investigation, remediation, and notification to affected individuals or relevant authorities where required.</p>
+</div>
+<div class="legal-section">
+<h3>Changes To This Privacy Policy</h3>
+<p>We may update this Privacy Policy periodically.</p>
+<p>The revised version will display a new &quot;Last Updated&quot; date.</p>
+<p>Where legally required, we will provide additional notice or obtain consent for material changes.</p>
+</div>
+<div class="legal-section">
+<h3>Consent And Acknowledgment</h3>
+<p>By registering for or using AssetSpring, you acknowledge that you have read this Privacy Policy and understand how AssetSpring may collect, use, store, and disclose information as described above, subject to applicable law.</p>
+</div>
+                    <div class="legal-review-notice"><strong>Legal review notice:</strong> This document is a general legal and product-policy template and is not a substitute for advice from a qualified lawyer or compliance professional. Because AssetSpring involves savings, investment-related functionality, cryptocurrency transactions, and personal data, these documents should be reviewed by appropriately qualified legal and compliance professionals in the relevant jurisdiction before the platform accepts real customer funds or is publicly launched, and adapted to AssetSpring’s actual business structure, licensing status, services, jurisdictions, custody arrangements, payment mechanisms, and regulatory obligations.</div>
+                </div>
+            </div>
+            <footer class="ws-footer ws-grid-bg ws-grid-bg--flat">
+                <div class="ws-footer-inner">
+                    <div>
+                        <div class="ws-footer-brand"><svg class="ws-logo-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg> AssetSpring</div>
+                        <p class="ws-footer-tagline">Save with a plan, not a guess. Automatic transfers, clear goals, progress you can actually see.</p>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Product</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                            <li><a href="#" onclick="showPage('testimonials'); return false;">Testimonials</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Open an account</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Account</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('signin'); return false;">Log in</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Sign up</a></li>
+                            <li><a href="#" onclick="showPage('forgot-password'); return false;">Forgot password</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Legal</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('terms'); return false;">Terms of Service</a></li>
+                            <li><a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a></li>
+                            <li><a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure</a></li>
+                            <li><a href="#" onclick="showPage('aml-kyc'); return false;">AML / KYC Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Policies</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('cookie-policy'); return false;">Cookie Policy</a></li>
+                            <li><a href="#" onclick="showPage('deposit-withdrawal-policy'); return false;">Deposit &amp; Withdrawal</a></li>
+                            <li><a href="#" onclick="showPage('referral-terms'); return false;">Referral Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ws-footer-bottom">
+                    <span>&copy; <span class="ws-footer-year"></span> AssetSpring. All rights reserved.</span>
+                    <span>Not a bank &mdash; see our Risk Disclosure and Terms of Service for how savings and investment features actually work.</span>
+                </div>
+            </footer>
+        </div>
+
+        <div id="page-risk-disclosure" class="page welcome-v2">
+            <div class="page-container ws-grid-bg ws-grid-bg--flat">
+                <nav class="page-nav">
+                    <div class="logo" onclick="showPage('welcome')">
+                        <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                        <span>AssetSpring</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="showPage('welcome')"><i class="fas fa-arrow-left"></i> Back</button>
+                </nav>
+                <div class="page-content legal-content">
+                    <h1>Risk Disclosure Statement</h1>
+                    <p class="legal-meta">Effective Date: [Insert Date] &middot; Last Updated: [Insert Date]</p>
+<div class="legal-section">
+<h3>Key Risk Categories</h3>
+<p>AssetSpring provides this risk disclosure covering:</p>
+<ul><li>Investment and market risk.</li><li>Cryptocurrency price volatility.</li><li>Potential loss of principal.</li><li>Blockchain and network risks.</li><li>Irreversible transactions.</li><li>Wallet-address risks.</li><li>Smart-contract or technology risks, where applicable.</li><li>Liquidity risks.</li><li>Regulatory and legal risks.</li><li>Tax considerations.</li><li>Third-party service risks.</li><li>No guarantee of profit or return.</li></ul>
+</div>
+<div class="legal-section"><h3>Acknowledgment</h3><p>Users are required to acknowledge the applicable risks before participating in relevant financial activities on AssetSpring.</p></div>
+                    <div class="legal-review-notice"><strong>Legal review notice:</strong> This document is a general legal and product-policy template and is not a substitute for advice from a qualified lawyer or compliance professional. Because AssetSpring involves savings, investment-related functionality, cryptocurrency transactions, and personal data, these documents should be reviewed by appropriately qualified legal and compliance professionals in the relevant jurisdiction before the platform accepts real customer funds or is publicly launched, and adapted to AssetSpring’s actual business structure, licensing status, services, jurisdictions, custody arrangements, payment mechanisms, and regulatory obligations.</div>
+                </div>
+            </div>
+            <footer class="ws-footer ws-grid-bg ws-grid-bg--flat">
+                <div class="ws-footer-inner">
+                    <div>
+                        <div class="ws-footer-brand"><svg class="ws-logo-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg> AssetSpring</div>
+                        <p class="ws-footer-tagline">Save with a plan, not a guess. Automatic transfers, clear goals, progress you can actually see.</p>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Product</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                            <li><a href="#" onclick="showPage('testimonials'); return false;">Testimonials</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Open an account</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Account</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('signin'); return false;">Log in</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Sign up</a></li>
+                            <li><a href="#" onclick="showPage('forgot-password'); return false;">Forgot password</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Legal</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('terms'); return false;">Terms of Service</a></li>
+                            <li><a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a></li>
+                            <li><a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure</a></li>
+                            <li><a href="#" onclick="showPage('aml-kyc'); return false;">AML / KYC Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Policies</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('cookie-policy'); return false;">Cookie Policy</a></li>
+                            <li><a href="#" onclick="showPage('deposit-withdrawal-policy'); return false;">Deposit &amp; Withdrawal</a></li>
+                            <li><a href="#" onclick="showPage('referral-terms'); return false;">Referral Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ws-footer-bottom">
+                    <span>&copy; <span class="ws-footer-year"></span> AssetSpring. All rights reserved.</span>
+                    <span>Not a bank &mdash; see our Risk Disclosure and Terms of Service for how savings and investment features actually work.</span>
+                </div>
+            </footer>
+        </div>
+
+        <div id="page-aml-kyc" class="page welcome-v2">
+            <div class="page-container ws-grid-bg ws-grid-bg--flat">
+                <nav class="page-nav">
+                    <div class="logo" onclick="showPage('welcome')">
+                        <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                        <span>AssetSpring</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="showPage('welcome')"><i class="fas fa-arrow-left"></i> Back</button>
+                </nav>
+                <div class="page-content legal-content">
+                    <h1>AML / KYC Policy</h1>
+                    <p class="legal-meta">Effective Date: [Insert Date] &middot; Last Updated: [Insert Date]</p>
+<div class="legal-section">
+<h3>Compliance Procedures</h3>
+<p>AssetSpring maintains procedures addressing the following areas:</p>
+<ul><li>Customer identification and verification.</li><li>Identity-document verification where required.</li><li>Beneficial ownership where applicable.</li><li>Transaction monitoring.</li><li>Suspicious-activity escalation.</li><li>Fraud prevention.</li><li>Sanctions screening where applicable.</li><li>Record keeping.</li><li>Risk-based customer due diligence.</li><li>Account restrictions where legally or operationally required.</li></ul>
+</div>
+<div class="legal-section"><h3>Regulatory Review</h3><p>This policy is reviewed on an ongoing basis against the specific regulatory framework applicable to AssetSpring&#x27;s actual business model and jurisdiction.</p></div>
+                    <div class="legal-review-notice"><strong>Legal review notice:</strong> This document is a general legal and product-policy template and is not a substitute for advice from a qualified lawyer or compliance professional. Because AssetSpring involves savings, investment-related functionality, cryptocurrency transactions, and personal data, these documents should be reviewed by appropriately qualified legal and compliance professionals in the relevant jurisdiction before the platform accepts real customer funds or is publicly launched, and adapted to AssetSpring’s actual business structure, licensing status, services, jurisdictions, custody arrangements, payment mechanisms, and regulatory obligations.</div>
+                </div>
+            </div>
+            <footer class="ws-footer ws-grid-bg ws-grid-bg--flat">
+                <div class="ws-footer-inner">
+                    <div>
+                        <div class="ws-footer-brand"><svg class="ws-logo-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg> AssetSpring</div>
+                        <p class="ws-footer-tagline">Save with a plan, not a guess. Automatic transfers, clear goals, progress you can actually see.</p>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Product</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                            <li><a href="#" onclick="showPage('testimonials'); return false;">Testimonials</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Open an account</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Account</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('signin'); return false;">Log in</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Sign up</a></li>
+                            <li><a href="#" onclick="showPage('forgot-password'); return false;">Forgot password</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Legal</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('terms'); return false;">Terms of Service</a></li>
+                            <li><a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a></li>
+                            <li><a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure</a></li>
+                            <li><a href="#" onclick="showPage('aml-kyc'); return false;">AML / KYC Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Policies</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('cookie-policy'); return false;">Cookie Policy</a></li>
+                            <li><a href="#" onclick="showPage('deposit-withdrawal-policy'); return false;">Deposit &amp; Withdrawal</a></li>
+                            <li><a href="#" onclick="showPage('referral-terms'); return false;">Referral Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ws-footer-bottom">
+                    <span>&copy; <span class="ws-footer-year"></span> AssetSpring. All rights reserved.</span>
+                    <span>Not a bank &mdash; see our Risk Disclosure and Terms of Service for how savings and investment features actually work.</span>
+                </div>
+            </footer>
+        </div>
+
+        <div id="page-cookie-policy" class="page welcome-v2">
+            <div class="page-container ws-grid-bg ws-grid-bg--flat">
+                <nav class="page-nav">
+                    <div class="logo" onclick="showPage('welcome')">
+                        <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                        <span>AssetSpring</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="showPage('welcome')"><i class="fas fa-arrow-left"></i> Back</button>
+                </nav>
+                <div class="page-content legal-content">
+                    <h1>Cookie Policy</h1>
+                    <div class="legal-section">
+<h3>What This Policy Covers</h3>
+<p>AssetSpring&#x27;s Cookie Policy explains:</p>
+<ul><li>Cookies used for authentication.</li><li>Session and local-storage technologies.</li><li>Security-related technologies.</li><li>Preference storage.</li><li>Analytics technologies, if used.</li><li>Third-party technologies, if used.</li><li>How users can control cookies.</li><li>The effect of disabling required cookies.</li></ul>
+</div>
+                    
+                </div>
+            </div>
+            <footer class="ws-footer ws-grid-bg ws-grid-bg--flat">
+                <div class="ws-footer-inner">
+                    <div>
+                        <div class="ws-footer-brand"><svg class="ws-logo-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg> AssetSpring</div>
+                        <p class="ws-footer-tagline">Save with a plan, not a guess. Automatic transfers, clear goals, progress you can actually see.</p>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Product</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                            <li><a href="#" onclick="showPage('testimonials'); return false;">Testimonials</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Open an account</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Account</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('signin'); return false;">Log in</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Sign up</a></li>
+                            <li><a href="#" onclick="showPage('forgot-password'); return false;">Forgot password</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Legal</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('terms'); return false;">Terms of Service</a></li>
+                            <li><a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a></li>
+                            <li><a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure</a></li>
+                            <li><a href="#" onclick="showPage('aml-kyc'); return false;">AML / KYC Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Policies</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('cookie-policy'); return false;">Cookie Policy</a></li>
+                            <li><a href="#" onclick="showPage('deposit-withdrawal-policy'); return false;">Deposit &amp; Withdrawal</a></li>
+                            <li><a href="#" onclick="showPage('referral-terms'); return false;">Referral Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ws-footer-bottom">
+                    <span>&copy; <span class="ws-footer-year"></span> AssetSpring. All rights reserved.</span>
+                    <span>Not a bank &mdash; see our Risk Disclosure and Terms of Service for how savings and investment features actually work.</span>
+                </div>
+            </footer>
+        </div>
+
+        <div id="page-deposit-withdrawal-policy" class="page welcome-v2">
+            <div class="page-container ws-grid-bg ws-grid-bg--flat">
+                <nav class="page-nav">
+                    <div class="logo" onclick="showPage('welcome')">
+                        <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                        <span>AssetSpring</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="showPage('welcome')"><i class="fas fa-arrow-left"></i> Back</button>
+                </nav>
+                <div class="page-content legal-content">
+                    <h1>Deposit &amp; Withdrawal Policy</h1>
+                    <div class="legal-section">
+<h3>What This Policy Covers</h3>
+<p>This policy explains:</p>
+<ul><li>Supported deposit methods.</li><li>Supported cryptocurrency networks.</li><li>Official wallet-address verification.</li><li>Proof-of-payment requirements.</li><li>Transaction confirmation requirements.</li><li>Pending transaction procedures.</li><li>Deposit verification timelines.</li><li>Withdrawal requirements.</li><li>Applicable fees.</li><li>Minimum and maximum limits, where applicable.</li><li>Rejected or failed transactions.</li><li>Incorrect-network transactions.</li><li>Incorrect-wallet-address transactions.</li><li>Blockchain delays and network congestion.</li><li>Fraud and compliance reviews.</li></ul>
+</div>
+                    
+                </div>
+            </div>
+            <footer class="ws-footer ws-grid-bg ws-grid-bg--flat">
+                <div class="ws-footer-inner">
+                    <div>
+                        <div class="ws-footer-brand"><svg class="ws-logo-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg> AssetSpring</div>
+                        <p class="ws-footer-tagline">Save with a plan, not a guess. Automatic transfers, clear goals, progress you can actually see.</p>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Product</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                            <li><a href="#" onclick="showPage('testimonials'); return false;">Testimonials</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Open an account</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Account</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('signin'); return false;">Log in</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Sign up</a></li>
+                            <li><a href="#" onclick="showPage('forgot-password'); return false;">Forgot password</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Legal</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('terms'); return false;">Terms of Service</a></li>
+                            <li><a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a></li>
+                            <li><a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure</a></li>
+                            <li><a href="#" onclick="showPage('aml-kyc'); return false;">AML / KYC Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Policies</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('cookie-policy'); return false;">Cookie Policy</a></li>
+                            <li><a href="#" onclick="showPage('deposit-withdrawal-policy'); return false;">Deposit &amp; Withdrawal</a></li>
+                            <li><a href="#" onclick="showPage('referral-terms'); return false;">Referral Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ws-footer-bottom">
+                    <span>&copy; <span class="ws-footer-year"></span> AssetSpring. All rights reserved.</span>
+                    <span>Not a bank &mdash; see our Risk Disclosure and Terms of Service for how savings and investment features actually work.</span>
+                </div>
+            </footer>
+        </div>
+
+        <div id="page-referral-terms" class="page welcome-v2">
+            <div class="page-container ws-grid-bg ws-grid-bg--flat">
+                <nav class="page-nav">
+                    <div class="logo" onclick="showPage('welcome')">
+                        <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                        <span>AssetSpring</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="showPage('welcome')"><i class="fas fa-arrow-left"></i> Back</button>
+                </nav>
+                <div class="page-content legal-content">
+                    <h1>Referral Program Terms</h1>
+                    <div class="legal-section">
+<h3>What These Terms Cover</h3>
+<p>Where a referral program is offered, these terms define:</p>
+<ul><li>Eligibility.</li><li>Referral-code rules.</li><li>Qualifying transactions or activities.</li><li>Reward calculation.</li><li>Reward timing.</li><li>Maximum rewards, if applicable.</li><li>Prohibited referral practices.</li><li>Fraud prevention.</li><li>Cancellation or reversal of invalid rewards.</li><li>Changes or termination of the referral program.</li></ul>
+</div>
+                    
+                </div>
+            </div>
+            <footer class="ws-footer ws-grid-bg ws-grid-bg--flat">
+                <div class="ws-footer-inner">
+                    <div>
+                        <div class="ws-footer-brand"><svg class="ws-logo-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg> AssetSpring</div>
+                        <p class="ws-footer-tagline">Save with a plan, not a guess. Automatic transfers, clear goals, progress you can actually see.</p>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Product</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                            <li><a href="#" onclick="showPage('testimonials'); return false;">Testimonials</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Open an account</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Account</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('signin'); return false;">Log in</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Sign up</a></li>
+                            <li><a href="#" onclick="showPage('forgot-password'); return false;">Forgot password</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Legal</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('terms'); return false;">Terms of Service</a></li>
+                            <li><a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a></li>
+                            <li><a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure</a></li>
+                            <li><a href="#" onclick="showPage('aml-kyc'); return false;">AML / KYC Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Policies</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('cookie-policy'); return false;">Cookie Policy</a></li>
+                            <li><a href="#" onclick="showPage('deposit-withdrawal-policy'); return false;">Deposit &amp; Withdrawal</a></li>
+                            <li><a href="#" onclick="showPage('referral-terms'); return false;">Referral Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ws-footer-bottom">
+                    <span>&copy; <span class="ws-footer-year"></span> AssetSpring. All rights reserved.</span>
+                    <span>Not a bank &mdash; see our Risk Disclosure and Terms of Service for how savings and investment features actually work.</span>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Testimonials Page -->
+        <div id="page-testimonials" class="page welcome-v2">
+            <div class="page-container ws-grid-bg ws-grid-bg--flat">
+                <nav class="page-nav">
+                    <div class="logo" onclick="showPage('welcome')">
+                        <svg class="ws-logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg>
+                        <span>AssetSpring</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="showPage('welcome')"><i class="fas fa-arrow-left"></i> Back</button>
+                </nav>
+                <div class="page-content">
+                    <h1>Testimonials</h1>
+                    <div class="testimonials-grid" id="testimonials-grid">
+                        <!-- Testimonials will be injected here -->
+                    </div>
+                </div>
+            <footer class="ws-footer ws-grid-bg ws-grid-bg--flat">
+                <div class="ws-footer-inner">
+                    <div>
+                        <div class="ws-footer-brand"><svg class="ws-logo-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M16 23V13" stroke="#fbfcf8" stroke-width="2" stroke-linecap="round"/><path d="M16 13C16 13 10.5 13 10.5 7.5C16 7.5 16 13 16 13Z" fill="#fbfcf8"/><path d="M16 16.5C16 16.5 21.5 16.5 21.5 11C16 11 16 16.5 16 16.5Z" fill="#fbfcf8"/></svg> AssetSpring</div>
+                        <p class="ws-footer-tagline">Save with a plan, not a guess. Automatic transfers, clear goals, progress you can actually see.</p>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Product</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                            <li><a href="#" onclick="showPage('testimonials'); return false;">Testimonials</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Open an account</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Account</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('signin'); return false;">Log in</a></li>
+                            <li><a href="#" onclick="showPage('signup'); return false;">Sign up</a></li>
+                            <li><a href="#" onclick="showPage('forgot-password'); return false;">Forgot password</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Legal</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('terms'); return false;">Terms of Service</a></li>
+                            <li><a href="#" onclick="showPage('privacy'); return false;">Privacy Policy</a></li>
+                            <li><a href="#" onclick="showPage('risk-disclosure'); return false;">Risk Disclosure</a></li>
+                            <li><a href="#" onclick="showPage('aml-kyc'); return false;">AML / KYC Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ws-footer-heading">Policies</div>
+                        <ul class="ws-footer-links">
+                            <li><a href="#" onclick="showPage('cookie-policy'); return false;">Cookie Policy</a></li>
+                            <li><a href="#" onclick="showPage('deposit-withdrawal-policy'); return false;">Deposit &amp; Withdrawal</a></li>
+                            <li><a href="#" onclick="showPage('referral-terms'); return false;">Referral Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ws-footer-bottom">
+                    <span>&copy; <span class="ws-footer-year"></span> AssetSpring. All rights reserved.</span>
+                    <span>Not a bank &mdash; see our Risk Disclosure and Terms of Service for how savings and investment features actually work.</span>
+                </div>
+            </footer>
+            </div>
+        </div>
+
+        <!-- Dashboard Container (Authenticated) -->
+        <div id="dashboard-container" style="display: none;">
+            <!-- Sidebar -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-brand">
+                    <i class="fas fa-seedling"></i>
+                    <span>AssetSpring</span>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active" data-page="dashboard">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="deposits">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>Deposits</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="withdrawals">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Withdrawals</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="investments">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Investments</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="savings">
+                        <i class="fas fa-piggy-bank"></i>
+                        <span>Savings</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="transactions">
+                        <i class="fas fa-list-ul"></i>
+                        <span>Transactions</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="referrals">
+                        <i class="fas fa-gift"></i>
+                        <span>Referrals</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="profile">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="nav-item admin-only" data-page="admin-users" style="display: none;">
+                        <i class="fas fa-users-cog"></i>
+                        <span>Users</span>
+                    </a>
+                    <a href="#" class="nav-item admin-only" data-page="admin-deposits" style="display: none;">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>Manage Deposits</span>
+                    </a>
+                    <a href="#" class="nav-item admin-only" data-page="admin-withdrawals" style="display: none;">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Manage Withdrawals</span>
+                    </a>
+                    <a href="#" class="nav-item super-admin-only" data-page="admin-testimonials" style="display: none;">
+                        <i class="fas fa-quote-right"></i>
+                        <span>Testimonials</span>
+                    </a>
+                    <a href="#" class="nav-item super-admin-only" data-page="admin-newsletter" style="display: none;">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Newsletter</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span>Notifications</span>
+                        <span class="badge" id="notification-badge">0</span>
+                    </a>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="btn btn-danger btn-block" onclick="handleLogout()">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Top Bar -->
+                <header class="top-bar">
+                    <button class="menu-toggle" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="top-bar-right">
+                        <button class="btn btn-outline btn-sm" onclick="refreshDashboard()">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                        <span class="user-info" id="user-info-display">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="user-name-display">User</span>
+                        </span>
+                    </div>
+                </header>
+
+                <!-- Dashboard Pages -->
+                <div id="page-dashboard" class="dashboard-page active">
+                    <div class="page-header">
+                        <div>
+                            <h1>Dashboard</h1>
+                            <p>Welcome back, <span id="dashboard-user-name">User</span></p>
+                        </div>
+                        <button class="btn btn-outline how-it-works-btn" onclick="showHowItWorks('dashboard')">
+                            <i class="fas fa-question-circle"></i> How It Works
+                        </button>
+                    </div>
+                    <div class="dashboard-stats" id="dashboard-stats">
+                        <!-- Stats cards loaded dynamically -->
+                    </div>
+                    <div class="dashboard-charts">
+                        <div class="chart-card">
+                            <h3>Savings Growth</h3>
+                            <canvas id="savings-chart"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <h3>Investment Performance</h3>
+                            <canvas id="investment-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="dashboard-recent">
+                        <div class="recent-card">
+                            <h3>Recent Transactions</h3>
+                            <div id="recent-transactions">
+                                <!-- Loaded dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deposits Page -->
+                <div id="page-deposits" class="dashboard-page">
+                    <div class="page-header">
+                        <h1>Deposits</h1>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <button class="btn btn-outline how-it-works-btn" onclick="showHowItWorks('deposits')">
+                                <i class="fas fa-question-circle"></i> How It Works
+                            </button>
+                            <button class="btn btn-primary" onclick="showDepositModal()">
+                                <i class="fas fa-plus"></i> New Deposit
+                            </button>
+                        </div>
+                    </div>
+                    <div class="deposit-list" id="deposit-list">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Withdrawals Page -->
+                <div id="page-withdrawals" class="dashboard-page">
+                    <div class="page-header">
+                        <h1>Withdrawals</h1>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <button class="btn btn-outline how-it-works-btn" onclick="showHowItWorks('withdrawals')">
+                                <i class="fas fa-question-circle"></i> How It Works
+                            </button>
+                            <button class="btn btn-primary" onclick="showWithdrawalModal()">
+                                <i class="fas fa-plus"></i> New Withdrawal
+                            </button>
+                        </div>
+                    </div>
+                    <div class="withdrawal-list" id="withdrawal-list">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Investments Page -->
+                <div id="page-investments" class="dashboard-page">
+                    <div class="page-header">
+                        <h1>Investments</h1>
+                        <button class="btn btn-outline how-it-works-btn" onclick="showHowItWorks('investments')">
+                            <i class="fas fa-question-circle"></i> How It Works
+                        </button>
+                    </div>
+                    <div class="investment-plans" id="investment-plans">
+                        <!-- Loaded dynamically -->
+                    </div>
+                    <div class="investment-list" id="investment-list">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Savings Page -->
+                <div id="page-savings" class="dashboard-page">
+                    <div class="page-header">
+                        <h1>Savings Goals</h1>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <button class="btn btn-outline how-it-works-btn" onclick="showHowItWorks('savings')">
+                                <i class="fas fa-question-circle"></i> How It Works
+                            </button>
+                            <button class="btn btn-secondary" onclick="showAddFundsModal()">
+                                <i class="fas fa-piggy-bank"></i> Add Funds
+                            </button>
+                            <button class="btn btn-primary" onclick="showSavingsModal()">
+                                <i class="fas fa-plus"></i> New Goal
+                            </button>
+                        </div>
+                    </div>
+                    <div class="savings-goals" id="savings-goals">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Transactions Page -->
+                <div id="page-transactions" class="dashboard-page">
+                    <div class="page-header">
+                        <h1>Transactions</h1>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                            <button class="btn btn-outline how-it-works-btn" onclick="showHowItWorks('transactions')">
+                                <i class="fas fa-question-circle"></i> How It Works
+                            </button>
+                            <div class="filter-group">
+                                <select id="transaction-filter" onchange="filterTransactions()">
+                                    <option value="ALL">All</option>
+                                    <option value="DEPOSIT">Deposits</option>
+                                    <option value="WITHDRAWAL">Withdrawals</option>
+                                    <option value="INVESTMENT">Investments</option>
+                                    <option value="SAVINGS">Savings</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transaction-list" id="transaction-list">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Referrals Page -->
+                <div id="page-referrals" class="dashboard-page">
+                    <div class="page-header">
+                        <h1>Referrals</h1>
+                    </div>
+                    <div class="referral-info" id="referral-info">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Profile Page -->
+                <div id="page-profile" class="dashboard-page">
+                    <div class="page-header">
+                        <h1>Profile</h1>
+                    </div>
+                    <div class="profile-content" id="profile-content">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Notifications Page -->
+                <div id="page-notifications" class="dashboard-page">
+                    <div class="page-header">
+                        <h1>Notifications</h1>
+                        <button class="btn btn-outline" onclick="markAllRead()">
+                            <i class="fas fa-check-double"></i> Mark All Read
+                        </button>
+                    </div>
+                    <div class="notification-list" id="notification-list">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Admin Pages -->
+                <div id="page-admin-users" class="dashboard-page admin-page">
+                    <div class="page-header">
+                        <h1>User Management</h1>
+                    </div>
+                    <div class="admin-table-container">
+                        <table class="admin-table" id="users-table">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Balance</th>
+                                    <th>Status</th>
+                                    <th>Joined</th>
+                                </tr>
+                            </thead>
+                            <tbody id="users-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="page-admin-deposits" class="dashboard-page admin-page">
+                    <div class="page-header">
+                        <h1>Manage Deposits</h1>
+                    </div>
+                    <div class="admin-table-container">
+                        <table class="admin-table" id="admin-deposits-table">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Amount</th>
+                                    <th>Asset</th>
+                                    <th>Status</th>
+                                    <th>Submitted</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-deposits-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="page-admin-withdrawals" class="dashboard-page admin-page">
+                    <div class="page-header">
+                        <h1>Manage Withdrawals</h1>
+                    </div>
+                    <div class="admin-table-container">
+                        <table class="admin-table" id="admin-withdrawals-table">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Amount</th>
+                                    <th>Asset</th>
+                                    <th>Status</th>
+                                    <th>Submitted</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-withdrawals-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="page-admin-testimonials" class="dashboard-page admin-page">
+                    <div class="page-header">
+                        <h1>Manage Testimonials</h1>
+                        <button class="btn btn-primary" onclick="showTestimonialModal()">
+                            <i class="fas fa-plus"></i> Add Testimonial
+                        </button>
+                    </div>
+                    <div class="admin-table-container">
+                        <table class="admin-table" id="testimonials-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Message</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="testimonials-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="page-admin-newsletter" class="dashboard-page admin-page">
+                    <div class="page-header">
+                        <h1>Newsletter</h1>
+                        <button class="btn btn-primary" onclick="showNewsletterModal()">
+                            <i class="fas fa-plus"></i> Publish Newsletter
+                        </button>
+                    </div>
+                    <div class="newsletter-list" id="newsletter-list">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    MODALS
+    ============================================================ -->
+    
+    <!-- Deposit Modal -->
+    <div id="deposit-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Submit Deposit</h2>
+                <button class="modal-close" onclick="closeModal('deposit-modal')">&times;</button>
+            </div>
+            <form id="deposit-form" onsubmit="handleDepositSubmit(event)">
+                <div class="form-group">
+                    <label>Amount (USD)</label>
+                    <input type="number" id="deposit-amount" placeholder="Enter amount" min="0.01" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label>Cryptocurrency</label>
+                    <select id="deposit-asset" required>
+                        <option value="BTC">Bitcoin (BTC)</option>
+                        <option value="ETH">Ethereum (ETH)</option>
+                        <option value="USDT">Tether (USDT)</option>
+                        <option value="BNB">BNB</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Network</label>
+                    <select id="deposit-network" required>
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Ethereum">Ethereum</option>
+                        <option value="ERC20">ERC20</option>
+                        <option value="BSC">BSC</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Wallet Address</label>
+                    <div class="wallet-address-box" id="deposit-wallet-box">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <span id="deposit-wallet-address">Loading wallet address&hellip;</span>
+                        <button type="button" class="btn btn-outline btn-sm" id="deposit-wallet-copy-btn" onclick="copyToClipboard(document.getElementById('deposit-wallet-address').textContent)" disabled>
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <small class="form-hint" id="deposit-wallet-meta"></small>
+                </div>
+                <div class="form-group">
+                    <label>Transaction Hash</label>
+                    <input type="text" id="deposit-txhash" placeholder="Enter transaction hash" required>
+                </div>
+                <div class="form-group">
+                    <label>Proof of Payment (Optional)</label>
+                    <input type="text" id="deposit-proof" placeholder="Enter proof reference">
+                </div>
+                <div class="form-group">
+                    <label>Notes (Optional)</label>
+                    <textarea id="deposit-notes" placeholder="Any additional notes"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-paper-plane"></i> Submit Deposit
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Withdrawal Modal -->
+    <div id="withdrawal-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Request Withdrawal</h2>
+                <button class="modal-close" onclick="closeModal('withdrawal-modal')">&times;</button>
+            </div>
+            <form id="withdrawal-form" onsubmit="handleWithdrawalSubmit(event)">
+                <div class="form-group">
+                    <label>Amount (USD)</label>
+                    <input type="number" id="withdrawal-amount" placeholder="Enter amount" min="0.01" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label>Withdrawal Method</label>
+                    <select id="withdrawal-method" required>
+                        <option value="BTC">Bitcoin (BTC)</option>
+                        <option value="ETH">Ethereum (ETH)</option>
+                        <option value="USDT">Tether (USDT)</option>
+                        <option value="BNB">BNB</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Network</label>
+                    <select id="withdrawal-network" required>
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Ethereum">Ethereum</option>
+                        <option value="ERC20">ERC20</option>
+                        <option value="BSC">BSC</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Wallet Address</label>
+                    <input type="text" id="withdrawal-address" placeholder="Enter wallet address" required>
+                </div>
+                <div class="form-group">
+                    <label>Notes (Optional)</label>
+                    <textarea id="withdrawal-notes" placeholder="Any additional notes"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-paper-plane"></i> Request Withdrawal
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Investment Modal -->
+    <div id="investment-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Investment</h2>
+                <button class="modal-close" onclick="closeModal('investment-modal')">&times;</button>
+            </div>
+            <form id="investment-form" onsubmit="handleInvestmentSubmit(event)">
+                <div class="form-group">
+                    <label>Select Plan</label>
+                    <select id="investment-plan" required>
+                        <!-- Loaded dynamically -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Amount (USD)</label>
+                    <input type="number" id="investment-amount" placeholder="Enter amount" min="0.01" step="0.01" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-rocket"></i> Invest Now
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Savings Modal -->
+    <div id="savings-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Savings Goal</h2>
+                <button class="modal-close" onclick="closeModal('savings-modal')">&times;</button>
+            </div>
+            <form id="savings-form" onsubmit="handleSavingsSubmit(event)">
+                <div class="form-group">
+                    <label>Goal Name</label>
+                    <input type="text" id="savings-name" placeholder="e.g., New Car Fund" required>
+                </div>
+                <div class="form-group">
+                    <label>Target Amount (USD)</label>
+                    <input type="number" id="savings-target" placeholder="Enter target amount" min="0.01" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label>Target Date</label>
+                    <input type="date" id="savings-date" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-plus"></i> Create Goal
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Funds to Savings Goal Modal -->
+    <div id="savings-fund-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Funds to Savings Goal</h2>
+                <button class="modal-close" onclick="closeModal('savings-fund-modal')">&times;</button>
+            </div>
+            <form id="savings-fund-form" onsubmit="handleAddFundsSubmit(event)">
+                <div class="balance-display">
+                    <span>Available Balance</span>
+                    <strong id="fund-available-balance">$0.00</strong>
+                </div>
+                <div class="form-group">
+                    <label>Savings Goal</label>
+                    <select id="fund-goal-select" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Amount (USD)</label>
+                    <input type="number" id="fund-amount" placeholder="Enter amount" min="0.01" step="0.01" required>
+                    <small class="form-hint"><a href="#" onclick="useMaxFundAmount(event)">Use full available balance</a></small>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" id="fund-submit-btn">
+                    <i class="fas fa-check"></i> Confirm Transfer
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- How It Works Modal -->
+    <div id="how-it-works-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="how-it-works-title">How It Works</h2>
+                <button class="modal-close" onclick="closeModal('how-it-works-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ol class="how-it-works-steps" id="how-it-works-body">
+                    <!-- Populated dynamically by showHowItWorks() -->
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Testimonial Modal -->
+    <div id="submit-testimonial-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Share Your Story</h2>
+                <button class="modal-close" onclick="closeModal('submit-testimonial-modal')">&times;</button>
+            </div>
+            <form id="submit-testimonial-form" onsubmit="handleSubmitTestimonial(event)">
+                <div class="form-group">
+                    <label>Your Testimonial</label>
+                    <textarea id="submit-testimonial-message" placeholder="Tell other members about your experience..." rows="4" required></textarea>
+                    <small class="form-hint">Your testimonial will be reviewed before it appears publicly.</small>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-paper-plane"></i> Submit for Review
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Testimonial Modal -->
+    <div id="testimonial-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="testimonial-modal-title">Add Testimonial</h2>
+                <button class="modal-close" onclick="closeModal('testimonial-modal')">&times;</button>
+            </div>
+            <form id="testimonial-form" onsubmit="handleTestimonialSubmit(event)">
+                <input type="hidden" id="testimonial-edit-id">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="testimonial-name" placeholder="Enter name" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="testimonial-message" placeholder="Enter testimonial message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="testimonial-status">
+                        <option value="pending">Pending</option>
+                        <option value="approved">Approved</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-save"></i> Save Testimonial
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Newsletter Modal -->
+    <div id="newsletter-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Publish Newsletter</h2>
+                <button class="modal-close" onclick="closeModal('newsletter-modal')">&times;</button>
+            </div>
+            <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="newsletter-title" placeholder="Enter newsletter title" required>
+                </div>
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea id="newsletter-content" placeholder="Enter newsletter content" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-paper-plane"></i> Publish
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content modal-confirm">
+            <div class="modal-header">
+                <h2 id="confirm-title">Confirm Action</h2>
+                <button class="modal-close" onclick="closeModal('confirmation-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="confirm-message">Are you sure you want to perform this action?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal('confirmation-modal')">Cancel</button>
+                <button class="btn btn-danger" id="confirm-action-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" style="display: none;">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/deposits.js"></script>
+    <script src="js/withdrawals.js"></script>
+    <script src="js/investments.js"></script>
+    <script src="js/savings.js"></script>
+    <script src="js/transactions.js"></script>
+    <script src="js/referrals.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/testimonials.js"></script>
+    <script src="js/how-it-works.js"></script>
+    <script src="js/password-reset.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
