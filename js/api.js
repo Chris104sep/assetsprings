@@ -10,7 +10,7 @@ const API = {
     // ============================================================
     // Replace with your actual Web App URL:
     // Example: 'https://script.google.com/macros/s/AKfyc.../exec'
-    BASE_URL: 'https://script.google.com/macros/s/AKfycbzlRPfYFw72y59zmrYYPwlWdOa0AdxaRfBRytAOxRA5L1PLDCSfZ-xETY3VNc1HtdEu/exec',
+    BASE_URL: 'https://script.google.com/macros/s/AKfycbxQAFcWYkJIAPA4oQEnc-idU8G75x3VG1nIBKeWaNtFeNv_nWv3KrFBxjBBYrxRiZ5cZA/exec',
 
     // Request timeout (milliseconds)
     TIMEOUT: 30000,
